@@ -1,11 +1,24 @@
+<html>
+    <head>
+            <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+            # 위의 명시된 날짜 이후가 되면 페이지가 캐싱되지 않습니다.
+            (따라서 위와 같은 날짜로 지정할 경우 페이지는 지속적으로 캐싱되지 않습니다.)
+            <meta http-equiv="Expires" content="-1">
+            # 캐시된 페이지가 만료되어 삭제되는 시간을 정의합니다. 특별한 경우가 아니면 -1로 설정합니다.
+            <meta http-equiv="Pragma" content="no-cache">
+            # 페이지 로드시마다 페이지를 캐싱하지 않습니다. (HTTP 1.0)
+            <meta http-equiv="Cache-Control" content="no-cache">
+            # 페이지 로드시마다 페이지를 캐싱하지 않습니다. (HTTP 1.1)
+    </head>
 <style type="text/css">
+    body {margin: 0; padding: 0;}
   .tg  {border-collapse:collapse;border-spacing:0;}
   .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
     overflow:hidden;padding:0px 0px;word-break:normal;}
   .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
     font-weight:normal;overflow:hidden;padding:0px 0px;word-break:normal;}
   .tg .tg-xvcc{background-color:#CFE2F3;border-color:#000000;color:#A61C00;font-weight:bold;text-align:center;vertical-align:middle}
-  .tg .tg-fcvt{background-color:#FFF;border-color:#000000;text-align:left;vertical-align:middle; width: 300px; font-size: 12px; font-weight: bold; padding-left: 5px;}
+  .tg .tg-fcvt{background-color:#FFF;border-color:#000000;text-align:left;vertical-align:middle; font-size: 12px; font-weight: bold; padding-left: 5px; padding-right: 5px;}
   .tg .tg-xo0b{border-color:#000000;font-size:15px;text-align:center;vertical-align:middle}
   .tg .tg-4vrb{background-color:#FFF;border-color:#000000;text-align:center;vertical-align:middle}
   .tg .tg-eigh{background-color:#EFEFEF;border-color:#000000;font-weight:bold;text-align:center;vertical-align:middle}
@@ -18,7 +31,9 @@
   .tg .tg-w4w7{background-color:#FFF;border-color:#000000;text-align:center;vertical-align:top}
   td{height: 20px;}
   </style>
-<!--
+
+  <body style="width: 1250px; overflow: auto;">
+
   <table class="tg" style="position: fixed;">
     <thead>
       <tr>
@@ -33,7 +48,7 @@
         <td class="tg-kv7e" colspan="2"><span style="font-weight:bold;background-color:#FCE5CD;">이벤트</span></td>
         <td class="tg-kv7e" colspan="4"><span style="font-weight:bold;background-color:#FCE5CD">픽업 가챠</span></td>
         <td class="tg-kv7e" colspan="3" rowspan="2">하드 퀘스트 / 퓨어 메모리 / 상점<br>(퓨어 메모리: 6성 재료)</td>
-        <td class="tg-kv7e" rowspan="2" style="width: 300px;">비고</td>
+        <td class="tg-kv7e" rowspan="2" >비고</td>
       </tr>
       <tr>
         <td class="tg-kv7e"><span style="font-weight:bold;background-color:#FCE5CD">메인 배포</span></td>
@@ -53,7 +68,7 @@
         <td class="tg-4vrb"><img src="https://i.ibb.co/pwSsRm6/image.png" width="100" height="100"></td>
         <td class="tg-4vrb"><img src="https://i.ibb.co/d2x2HMX/image.jpg" width="100" height="100"></td>
         <td class="tg-4vrb"><img src="https://i.ibb.co/4Y5FdZT/image.jpg" width="100" height="100"></td>
-        <td class="tg-fcvt" rowspan="3">[이벤트] 배틀 오브 발렌타인<br>[전용장비] 4차 전용장비 추가<br></td>
+        <td class="tg-fcvt" rowspan="3">[이벤트] 베푸는 재단과 성스러운 학사의 이단아</td>
       </tr>
       <tr style="visibility: hidden;">
         <td class="tg-4vrb"><span style="background-color:#FFF">에리코</span></td>
@@ -79,7 +94,7 @@
       </tr>
     </tbody>
   </table>
--->
+
 
 
   <table class="tg">
@@ -1262,3 +1277,5 @@
     </tr>
   </tbody>
   </table>
+</body>
+</html>
