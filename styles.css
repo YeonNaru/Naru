@@ -5,11 +5,11 @@
   width: auto;
   position: relative;
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
-  background: #353535;
+  background: white;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid #353535;
+  border-bottom: 1px solid white;
   zoom: 1;
 }
 #cssmenu ul:before {
@@ -30,14 +30,16 @@
 #cssmenu li a {
   display: block;
   float: left;
-  color: #999999;
+  color: black;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px 7px 20px;
   border-bottom: 3px solid transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #cssmenu li a:hover {
-  color: #FFFFFF;
+  color: rgb(132, 189, 255);
   border-bottom: 3px solid #00b8fd;
 }
 #cssmenu li.active a {
