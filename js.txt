@@ -1,0 +1,74 @@
+ document.onclick = function(event) {
+    if(event.path[0].className == 'list_chkbox article_chkbox') del_gae_2();
+  }
+
+  function del_gae_2() {
+    var chkbox_ = document.getElementsByClassName('article_chkbox');
+    console.log('');
+    for(var num=0; num<100; num++) {
+        console.log(num);
+        del_gae(num);
+        console.log(chkbox_);
+        chkbox_[num].checked = false;
+        chkbox_[num+1].checked = true;
+    }
+    console.log('');
+    
+    
+}
+
+function del_gae(num) {
+    var nCount = 0;
+    var chk = $('input[name="chk_article[]"]:checked');
+    var allVals = Array();
+    if (!chk.length) {
+        alert("");
+        return;
+    }
+    if (chk.length > 1) {
+        chk.each(function() {
+            var no = $(this).closest('tr').attr('data-no');
+            var data_type = $(this).closest('tr').attr('data-type');
+            if (data_type == 'icon_notice' || data_type == 'icon_recomimg')
+                nNRCount = 0;
+                //else nCount++;
+            else
+                allVals.push(no);
+        });
+    }
+    if (chk.length == 1) {
+        chk.each(function() {
+            var no = $(this).closest('tr').attr('data-no');
+            //var data_type = $(this).closest('tr').attr('data-type');
+            //if(data_type == 'icon_notice' || data_type == 'icon_recomimg') nNRCount = 0;
+            //else nCount++;
+            allVals.push(no);
+        });
+    }
+    if (1) {
+        $.ajax({
+            type: "POST",
+            url: "/ajax/minor_manager_board_ajax/delete_list",
+            data: {
+                'ci_t': get_cookie('ci_c'),
+                'id': $.getURLParam('id'),
+                'nos': allVals
+            },
+            dataType: 'json',
+            cache: false,
+            async: false,
+            success: function(ajaxData) {
+                //if(typeof(ajaxData.msg) != 'undefined' && ajaxData.msg) {
+                // alert(ajaxData.msg);
+                //}
+                if (ajaxData.result == "success") {
+                    if(num == 99) location.reload(true);
+//                    location.reload(true);
+                }
+            },
+            error: function(data) {
+                alert('');
+            }
+        });
+    }
+}
